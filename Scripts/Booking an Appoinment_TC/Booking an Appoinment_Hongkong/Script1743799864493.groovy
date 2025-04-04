@@ -17,28 +17,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login Pre Condition'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login_TC/Login Pre Condition'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(5)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_CURA Healthcare Service/select_Tokyo CURA Healthcare Center        _5b4107'), 
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/select_Tokyo CURA Healthcare Center        _5b4107'), 
     'Hongkong CURA Healthcare Center', true)
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/Select_Apply for hospital readmission_hospit_63901f'))
+WebUI.click(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/Select_Apply for hospital readmission_hospit_63901f'))
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Medicaid_programs'))
+WebUI.click(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/input_Medicaid_programs'))
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Visit Date (Required)_visit_date'))
+WebUI.click(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/input_Visit Date (Required)_visit_date'))
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/Select Date'))
+WebUI.click(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/Select Date'))
 
-WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/textarea_Comment_comment'), 'No comment')
+WebUI.setText(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/textarea_Comment_comment'), 'No comment')
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Book Appointment'))
+WebUI.click(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/button_Book Appointment'))
 
 WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/appointment.php#summary')
 
-WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/Verify_Appointment Confirmation'), 
+WebUI.verifyElementText(findTestObject('Object Repository/Page_Booking_an_Appoinment_select_Hongkong/Verify_Appointment Confirmation'), 
     'Appointment Confirmation')
 
 WebUI.closeBrowser()
